@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-
+"""
+Module for making change
+"""
 
 def makeChange(coins, total):
-    """Determines the fewest number of coins needed to meet a given
-    amount total when given a pile of coins of different values.
+    """
+    Determine the fewest number of coins needed to meet a given
+    amount total,from a a pile of coins of different values.
     """
 
     if total <= 0:
