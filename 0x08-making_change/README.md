@@ -1,7 +1,7 @@
 # Making Change
 ## Task
 
-+ [x] 0. **Change comes from within**<br/>[0-making_change.py](0-making_change.py)Given a pile of coins of different values, determine the fewest number of coins needed to meet a given amount `total`.
++ [x] 0. **Change comes from within**<br/>[aking_change.py](0-making_change.py) Given a pile of coins of different values, determine the fewest number of coins needed to meet a given amount `total`.
   + Prototype: `def makeChange(coins, total)`
   + Return: fewest number of coins needed to meet `total`
     + If `total` is `0` or less, return `0`
@@ -12,7 +12,6 @@
   + Your solution’s runtime will be evaluated in this task
 
 **Example**
-
 ```
 carrie@ubuntu:~/0x08-making_change$ cat 0-main.py
 #!/usr/bin/python3
