@@ -37,5 +37,4 @@ guillaume@ubuntu:~/0x09$
 guillaume@ubuntu:~/0x09$ ./0-main.py
 12
 guillaume@ubuntu:~/0x09
-
 ```
