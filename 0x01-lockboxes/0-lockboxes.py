@@ -19,3 +19,23 @@ def canUnlockAll(boxes):
             unseen_boxes = unseen_boxes.union(boxes[boxIdx])
             seen_boxes.add(boxIdx)
     return n == len(seen_boxes)
+
+
+'''
+def canUnlockAll(boxes):
+    if not boxes or len(boxes) == 0:
+        return False
+    l = len(boxes)
+    t = 1
+    keys = [0]
+    for key in keys:
+        for n in boxes[key]:
+            if n not in keys:
+                if n != key and n < l:
+                    t += 1
+                    keys.append(n)
+    if t == l:
+        return True
+    return False
+
+'''
