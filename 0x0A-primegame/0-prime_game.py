@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def isWinner(x, nums):
     """
     Gets the winner of a prime game with 'x' amount of rounds.
@@ -16,7 +17,6 @@ def isWinner(x, nums):
             digit = nums[i % nums_len]
         else:
             digit = 0
-            
         n_nums = list(range(1, digit + 1, 1))
         prime_num = 2
         amt_turns = 0
