@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+A prime game
+"""
 
 def isWinner(x, nums):
     """
