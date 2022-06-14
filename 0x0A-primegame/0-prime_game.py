@@ -3,6 +3,7 @@
 A prime game
 """
 
+
 def isWinner(x, nums):
     """
     Gets the winner of a prime game with 'x' amount of rounds.
