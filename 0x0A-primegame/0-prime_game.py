@@ -15,6 +15,9 @@ def isWinner(x, nums):
     else:
         nums_len = 0
 
+    if nums_len == 0:
+        return None
+
     for i in range(x):
         if nums:
             digit = nums[i % nums_len]
