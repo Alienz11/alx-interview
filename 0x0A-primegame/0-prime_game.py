@@ -11,32 +11,48 @@ def isWinner(x, nums):
 
     players = ('Maria', 'Ben')
     winners = []
-    nums_len = len(nums) if nums else 0
+    if nums:
+        nums_len = len(nums)
+    else:
+        nums_len = 0
+
     if nums_len == 0:
         return None
+
     for i in range(x):
-        n = nums[i % nums_len] if nums else 0
-        n_nums = list(range(1, n + 1, 1))
-        prime = 2
-        turns = 0
-        while True:
-            removal_ocurred = False
-            p_multiples = list(range(prime, n + 1, prime))
-            for p_multiple in p_multiples:
-                if p_multiple in n_nums:
-                    n_nums.remove(p_multiple)
-                    removal_ocurred = True
-            turns += 1
-            if removal_ocurred:
-                for val in n_nums:
-                    if val > prime:
-                        prime = val
-                        break
+        if nums:
+            digit = nums[i % nums_len]
+        else:
+            digit = 0
+    
+    n_nums = list(range(1, digit + 1, 1))
+    prime_num = 2
+    amt_turns = 0
+    
+    while True:
+        nums_removed = False
+        prime_multiples = list(range(prime_num, digit + 1, prime_num))
+        for p in prime_multiples:
+            if p in n_nums:
+                n_nums.remove(p)
+                nums_removed = True
+        amt_turns += 1
+        
+        if nums_removed:
+            for j in n_nums:
+                if j > prime_num:
+                    prime_num = j
+                    break
             else:
                 break
-        winners.append(players[turns % 2])
-    marias_wins = winners.count(players[0])
-    bens_wins = winners.count(players[1])
-    if marias_wins == bens_wins:
+        winners.append(players[amt_turns % 2])
+    
+    maria_wins = winners.count(players[0])
+    ben_wins = winners.count(players[1])
+
+    if maria_wins == ben_wins:
         return None
-    return 'Maria' if marias_wins > bens_wins else 'Ben'
+    elif maria_wins > ben_wins:
+        return 'Maria'
+    else:
+        return 'Ben'
